@@ -1,0 +1,277 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About HouseFinder - AI-Powered Real Estate Valuation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="{% url 'home' %}" class="logo">
+        <i class="fas fa-home"></i>House Price Predictor
+      </a>
+      <div class="nav-links">
+        <a href="{% url 'home' %}">Home</a>
+        <!-- <a href="#">Properties</a> -->
+        <!-- <a href="#">Services</a> -->
+        <a href="{% url 'about' %}" class="active">About</a>
+        <!-- <a href="#">Contact</a> -->
+      </div>
+      <a href="{% url 'predict' %}" class="cta-button">Price Predictor</a>
+    </nav>
+  </header>
+
+  <!-- About Content -->
+  <!-- Add your actual about content here -->
+   <section class="about-hero">
+    <div class="about-hero-content">
+      <h1>Machine Learning House price predictor</h1>
+      <p>Discover the technology and team behind our revolutionary house price prediction platform</p>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="mission-section">
+    <div class="mission-content">
+      <div class="section-header">
+        <h2>Our Mission</h2>
+      </div>
+      
+      <p>HouseFinder is an intelligent, AI-driven web platform designed to assist users in accurately predicting house prices based on key property features. Built using Django for the backend and powered by machine learning models, HouseFinder takes inputs like location, area, number of bedrooms, bathrooms, and more, and processes this data to deliver highly accurate price estimations.</p>
+      
+      <p>Using advanced machine learning algorithms, the system analyzes key property attributes and provides accurate, instant price estimations..</p>
+      
+      <div class="values-grid">
+        <div class="value-card">
+          <i class="fas fa-bullseye"></i>
+          <h3>Accuracy</h3>
+          <p>Industry-leading prediction accuracy validated by independent auditors</p>
+        </div>
+        
+        <div class="value-card">
+          <i class="fas fa-lock-open"></i>
+          <h3>Transparency</h3>
+          <p>Clear methodology and explainable AI for every valuation</p>
+        </div>
+        
+        <div class="value-card">
+          <i class="fas fa-rocket"></i>
+          <h3>Innovation</h3>
+          <p>Continuous improvement through machine learning research</p>
+        </div>
+        
+        <div class="value-card">
+          <i class="fas fa-users"></i>
+          <h3>Accessibility</h3>
+          <p>Democratizing real estate insights for everyone</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mission-image">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="AI Technology">
+    </div>
+  </section>
+
+  <!-- Technology Section -->
+  <section class="technology-section">
+    <div class="tech-container">
+      <div class="section-header">
+        <h2>Our Technology</h2>
+        <p>The science behind accurate price predictions</p>
+      </div>
+      
+      <div class="tech-content">
+        <div class="tech-image">
+          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1465&q=80" alt="Machine Learning">
+        </div>
+        
+        <div class="tech-details">
+          <p>Our proprietary machine learning model combines multiple algorithms to deliver unparalleled accuracy in property valuation. We've trained our system on over 5 million historical property transactions across North America, with continuous learning from new market data.</p>
+          
+          <div class="tech-features">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Advanced Ensemble Modeling</h4>
+                <p>Combining gradient boosting, random forests, and neural networks for robust predictions</p>
+              </div>
+            </div>
+            
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Comprehensive Data Sources</h4>
+                <p>Scikit-learn: Most likely used to build and train the regression model (e.g., Linear Regression, Random Forest, etc.).
+
+Pandas: For handling and preprocessing tabular housing data.
+
+NumPy: For numerical operations and data transformation.
+
+Joblib / Pickle: For saving and loading the trained ML model</p>
+              </div>
+            </div>
+            
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-sync-alt"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Proper prediction</h4>
+                <p>The model is designed to predict property prices accurately based on the provided criteria.</p>
+              </div>
+            </div>
+            
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Bias Mitigation</h4>
+                <p>Advanced techniques to ensure fair and equitable valuations across all neighborhoods</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- <a href="services.html" class="cta-button">Learn More About Our Technology</a> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="section-header">
+      <h2>How It Was Done</h2>
+      <p>The experts behind our innovative platform</p>
+    </div>
+    
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="member-photo">
+         <img src="{% static 'assets/prediction1.png' %}" alt="Prediction Image">
+        </div>
+        <div class="member-info">
+          <h3>Prediction 1</h3>
+          <span class="position">Report 1</span>
+          <p>This is the first prediction that we have been Taken.</p>
+          <div class="social-links">
+           
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="team-member">
+        <div class="member-photo">
+          <img src="{% static 'assets/code 1.png' %}" alt="Prediction Image">
+        </div>
+        <div class="member-info">
+          <h3>The Making of Model</h3>
+          <span class="position">codding snippet</span>
+          <p>Here is an image that show the small part of making the model from the dataset.</p>
+          
+          </div>
+        </div>
+      </div>
+      
+      <div class="team-member">
+        <div class="member-photo">
+         <img src="{% static 'assets/code 2.png' %}" alt="Prediction Image">
+
+        </div>
+        <div class="member-info">
+          <h3>Streamlit frontend</h3>
+          <span class="position">Design 1</span>
+          <p>Small code of my first design of it through Streamlit.</p>
+          
+        </div>
+      </div>
+      
+      <!-- <div class="team-member">
+        <div class="member-photo">
+          <img src="{% static 'assets/prediction1.png' %}" alt="Prediction Image">
+        </div>
+        <div class="member-info">
+          <h3>David Kim</h3>
+          <span class="position">Lead Software Engineer</span>
+          <p>Full-stack developer specializing in real-time data processing and API architecture.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="section-header">
+      <h2>Our Impact in Numbers</h2>
+      <p>Transforming how people value properties</p>
+    </div>
+    
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value">98.2%</div>
+        <div class="stat-label">Prediction Accuracy</div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-value">500K+</div>
+        <div class="stat-label">Monthly Valuations</div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-value">$4.2B</div>
+        <div class="stat-label">Property Value Analyzed</div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-value">15M+</div>
+        <div class="stat-label">Data Points Processed</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="about-cta">
+    <h2>Experience the Future of Calculation</h2>
+    <p>Join thousands of homeowners, investors, and real estate professionals who trust House Prediction  for accurate property valuations</p>
+    <a href="{% url 'predict' %}" class="cta-button">Get Your Instant Valuation</a>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <!-- Example -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><i class="fas fa-chevron-right"></i><a href="{% url 'home' %}">Home</a></li>
+          <!-- <li><i class="fas fa-chevron-right"></i><a href="#">Properties</a></li> -->
+          <!-- <li><i class="fas fa-chevron-right"></i><a href="#">Services</a></li> -->
+          <li><i class="fas fa-chevron-right"></i><a href="{% url 'about' %}">About Us</a></li>
+          <!-- <li><i class="fas fa-chevron-right"></i><a href="#">Contact</a></li> -->
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; {{ now|date:"Y" }} House Price Prediction . All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Houseprice Predictor </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/styless.css' %}">
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="{% url 'home' %}" class="logo">
+        <i class="fas fa-home"></i>House Price Predictor
+      </a>
+      <div class="nav-links">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}" class="active">About</a>
+      </div>
+      <a href="{% url 'predict' %}" class="cta-button">Price Predictor</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Find Your Perfect Home at the Perfect Price</h1>
+        <p>House Price Predictor is an machine learning model train on Indian House Price dataset to help you discover your dream home and accurately predict its market value. </p>
+        <a href="{% url 'predict' %}" class="cta-button">Predict Your Home Price</a>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">50K+</div>
+            <div class="stat-label">Homes Analyzed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Accuracy Rate</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Support</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Modern House">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="section-header">
+      <h2>Why Choose House Price Predictor</h2>
+      <p>We have trained our machine in such a way that on you have to fill the criteria and thus you will get the accurate price</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <h3>ML-Powered Pricing</h3>
+        <p>Our advanced algorithms analyze market data to provide accurate home valuations instantly.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-search-dollar"></i>
+        </div>
+        <h3>Smart Property Matching</h3>
+        <p>Find properties that match your preferences and budget with our intelligent matching system.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Market Insights</h3>
+        <p>Get access to comprehensive market trends and neighborhood analytics.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prediction Section -->
+  <section class="prediction-section" id="predict">
+    <div class="prediction-container">
+      <h2>Predict Your Home's Value</h2>
+      <p>Our AI-powered prediction tool gives you an instant estimate of your home's market value based on current trends and comparable properties.</p>
+      <a href="{% url 'predict' %}" class="cta-button">
+        <i class="fas fa-calculator"></i> Try Price Predictor
+      </a>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="section-header">
+      <h2>What Our Customers Say</h2>
+      <p>Join thousands of satisfied homeowners who found their perfect home with HouseFinder</p>
+    </div>
+    
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          "HouseFinder's price prediction was spot on! We sold our home for just 1.2% more than their estimate. The entire process was smooth and transparent."
+        </div>
+        <div class="testimonial-author">
+          <div class="author-avatar">SM</div>
+          <div class="author-info">
+            <h4>Sarah Mitchell</h4>
+            <p>Homeowner, Seattle</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          "As a first-time homebuyer, I was overwhelmed. HouseFinder not only helped me find the perfect home but also ensured I paid the right price. The prediction tool is amazing!"
+        </div>
+        <div class="testimonial-author">
+          <div class="author-avatar">DJ</div>
+          <div class="author-info">
+            <h4>David Johnson</h4>
+            <p>First-time Buyer, Austin</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          "I've been in real estate for 15 years, and HouseFinder's valuation accuracy impresses me. It's become an essential tool in my business for setting listing prices."
+        </div>
+        <div class="testimonial-author">
+          <div class="author-avatar">MR</div>
+          <div class="author-info">
+            <h4>Michael Roberts</h4>
+            <p>Real Estate Agent, Miami</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>HousePrice Predictor</h3>
+        <p>Making Your Hard work of finding House price Easier.</p>
+      </div>
+
+      {% comment %}
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><i class="fas fa-chevron-right"></i><a href="#">Home</a></li>
+          <!-- <li><i class="fas fa-chevron-right"></i><a href="#">Properties</a></li>
+          <li><i class="fas fa-chevron-right"></i><a href="#">Services</a></li> -->
+          <li><i class="fas fa-chevron-right"></i><a href="#">About Us</a></li>
+          <!-- <li><i class="fas fa-chevron-right"></i><a href="#">Contact</a></li> -->
+        </ul>
+      </div>
+
+      <!-- <div class="footer-column">
+        <h3>Services</h3>
+        <ul class="footer-links">
+          <li><i class="fas fa-chevron-right"></i><a href="#">Home Valuation</a></li>
+          <li><i class="fas fa-chevron-right"></i><a href="#">Property Search</a></li>
+          <li><i class="fas fa-chevron-right"></i><a href="#">Market Analysis</a></li>
+          <li><i class="fas fa-chevron-right"></i><a href="#">Agent Finder</a></li>
+          <li><i class="fas fa-chevron-right"></i><a href="#">Mortgage Calculator</a></li>
+        </ul>
+      </div> -->
+
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <ul class="footer-links">
+          <li><i class="fas fa-map-marker-alt"></i> 123 Real Estate Blvd, San Francisco</li>
+          <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+          <li><i class="fas fa-envelope"></i> info@housefinder.com</li>
+          <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+        </ul>
+      </div>
+      {% endcomment %}
+    </div>
+    
+    <div class="copyright">
+      &copy; Made in 2025 HousePrice Predictor. All rights reserved by the creator.
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><i class="fas fa-chevron-right"></i><a href="{% url 'home' %}">Home</a></li>
+          <!-- <li><i class="fas fa-chevron-right"></i><a href="#">Properties</a></li> -->
+          <!-- <li><i class="fas fa-chevron-right"></i><a href="#">Services</a></li> -->
+          <li><i class="fas fa-chevron-right"></i><a href="{% url 'about' %}">About Us</a></li>
+          <!-- <li><i class="fas fa-chevron-right"></i><a href="#">Contact</a></li> -->
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
